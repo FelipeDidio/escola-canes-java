@@ -15,15 +15,19 @@ import java.util.ArrayList;
 public class Aluno extends Pessoa {
     private int matricula;
     
-    public Aluno(String nome, int cpf, String fone, String email, String endereco, String nascimento){
+    public Aluno(String nome, String cpf, String fone, String email, String endereco, String nascimento){
         super(nome, cpf, fone, email, endereco, nascimento);
-        this.matricula = matricula;
+        setMatricula(matricula);
     }
+
     
+    public Aluno(){
+        
+    }
     public int getMatricula(){
         return matricula;
     }
-    public void setMaatricula(int matricula){
+    private void setMatricula(int matricula){
         this.matricula = matricula;
     }
     
@@ -64,7 +68,7 @@ public class Aluno extends Pessoa {
             try{
                 while(rs.next() ){
                     String nome = rs.getString(1);
-                    int cpf = rs.getInt(2);
+                    String cpf = rs.getString(2);
                     String fone = rs.getString("fone");
                     String email = rs.getString(4);
                     String endereco = rs.getString("endereco");

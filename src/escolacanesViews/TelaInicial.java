@@ -5,6 +5,8 @@
  */
 package escolacanesViews;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author 180701103
@@ -29,9 +31,9 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btnCadastraAluno = new javax.swing.JButton();
+        btnGerirAluno = new javax.swing.JButton();
         btnCadastraProfessor = new javax.swing.JButton();
-        btnCadastraDisciplina = new javax.swing.JButton();
+        btnGerirDisciplina = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,11 +43,28 @@ public class TelaInicial extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel2.setText("Selecione o que você deseja fazer");
 
-        btnCadastraAluno.setText("Incluir Aluno");
+        btnGerirAluno.setText("Gerir Aluno");
+        btnGerirAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGerirAlunoActionPerformed(evt);
+            }
+        });
 
-        btnCadastraProfessor.setText("Incluir Professor");
+        btnCadastraProfessor.setText("Gerir Professor");
+        btnCadastraProfessor.setActionCommand("Gerir Professor");
+        btnCadastraProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastraProfessorActionPerformed(evt);
+            }
+        });
 
-        btnCadastraDisciplina.setText("Incluir Disciplina");
+        btnGerirDisciplina.setText("Gerir Disciplina");
+        btnGerirDisciplina.setActionCommand("Gerir Disciplina");
+        btnGerirDisciplina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGerirDisciplinaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -62,9 +81,9 @@ public class TelaInicial extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(btnCadastraAluno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnGerirAluno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(btnCadastraProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnCadastraDisciplina, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE))
+                                    .addComponent(btnGerirDisciplina, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE))
                                 .addGap(11, 11, 11)))))
                 .addContainerGap(136, Short.MAX_VALUE))
         );
@@ -76,16 +95,34 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addGap(39, 39, 39)
-                .addComponent(btnCadastraAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnGerirAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnCadastraProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnCadastraDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnGerirDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(84, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnGerirAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerirAlunoActionPerformed
+        CadastroAluno cadAluno = new CadastroAluno();
+        cadAluno.setSize(700, 600);
+        cadAluno.setVisible(true);
+        cadAluno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }//GEN-LAST:event_btnGerirAlunoActionPerformed
+
+    private void btnCadastraProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastraProfessorActionPerformed
+        CadastroProfessor cadProf = new CadastroProfessor();
+        cadProf.setSize(700, 600);
+        cadProf.setVisible(true);
+        cadProf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }//GEN-LAST:event_btnCadastraProfessorActionPerformed
+
+    private void btnGerirDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerirDisciplinaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGerirDisciplinaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,9 +161,9 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCadastraAluno;
-    private javax.swing.JButton btnCadastraDisciplina;
     private javax.swing.JButton btnCadastraProfessor;
+    private javax.swing.JButton btnGerirAluno;
+    private javax.swing.JButton btnGerirDisciplina;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

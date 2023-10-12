@@ -5,6 +5,8 @@
  */
 package escolacanesViews;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author 180701103
@@ -15,7 +17,10 @@ public class EscolaCanes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        TelaInicial telaInicio = new TelaInicial();
+        telaInicio.setSize(500, 500);
+        telaInicio.setVisible(true);
+        telaInicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     
 }

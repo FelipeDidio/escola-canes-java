@@ -12,13 +12,17 @@ package models;
 public class Pessoa {
     private int id;
     private String nome;
-    private int cpf;
+    private String cpf;
     private String fone;
     private String email;
     private String endereco;
     private String nascimento;
     
-    public Pessoa(String nome, int cpf, String fone, String email, String endereco, String nascimento){
+    public Pessoa(){
+        
+    }
+    
+    public Pessoa(String nome, String cpf, String fone, String email, String endereco, String nascimento){
         this.nome = nome;
         this.cpf = cpf;
         this.fone = fone;
@@ -43,11 +47,11 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

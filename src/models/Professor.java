@@ -16,7 +16,7 @@ import javax.naming.spi.DirStateFactory;
 public class Professor extends Pessoa{
     private int codigo;
     
-    public Professor(String nome, int cpf, String fone, String email, String endereco, String nascimento){
+    public Professor(String nome, String cpf, String fone, String email, String endereco, String nascimento){
         super(nome, cpf, fone, email, endereco, nascimento);
         this.codigo = codigo;
     
@@ -67,7 +67,7 @@ public class Professor extends Pessoa{
             try{
                 while(rs.next() ){
                     String nome = rs.getString(1);
-                    int cpf = rs.getInt(2);
+                    String cpf = rs.getString(2);
                     String fone = rs.getString("fone");
                     String email = rs.getString(4);
                     String endereco = rs.getString("endereco");
